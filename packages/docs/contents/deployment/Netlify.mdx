@@ -1,0 +1,138 @@
+---
+title: Netlify
+description: 在 Netlify.app 上部署 Afilmory 的指南。
+createdAt: 2025-09-16T09:22:17+08:00
+lastModified: 2025-09-17T14:55:42+08:00
+---
+
+# Netlify部署指南
+
+## 🍕 准备工作
+- 一个Netlify账号，可以直接使用Github登录
+- 存储桶API信息（阿里云oss/亚马逊S3/其他）
+- PostgreSQL 数据库（用于 SSR 应用）
+- Github fork本项目或本项目已在你仓库中
+
+## 🚀 快速开始
+
+> 如果你已经很熟悉Netlify，在部署的时候新增以下三个环境变量即可，对于首次部署或不熟悉请往下继续阅读
+> 
+> ```bash
+> S3_ACCESS_KEY_ID='你的存储桶AccessKeyID'
+> S3_SECRET_ACCESS_KEY='你的存储桶AccessKeySecret'
+> PG_CONNECTION_STRING='你的postgresql连接地址'
+> ```
+
+
+## 🎑 注册登录Netlify
+
+### 使用GitHub注册
+
+访问[Netlify官网](https://app.netlify.com/signup)，点击 **Sign up with GitHub** 按钮
+
+![使用GitHub注册](https://foruda.gitee.com/images/1757953042968112917/64cef441_1970629.png "使用GitHub注册")
+
+点击 **Authorize Netlify** 按钮，若未登录GitHub，上一步骤后会要求你登录GitHub
+
+![Authorize Netlify Auth](https://foruda.gitee.com/images/1757953166959498081/f6221bba_1970629.png "Authorize Netlify Auth")
+
+首次登录，Netlify会询问一些问题，填写完成后，滑动到页面最下方，点击 **Continue to deploy** 按钮，How are you planning to use Netlify 选择 Personal 即可
+
+![首次登录](https://foruda.gitee.com/images/1757953412978976336/2ffd8217_1970629.png "首次登录")
+
+## 👏开始部署
+
+### 导入项目
+
+点击 **GitHub** 按钮
+
+![点击Github](https://foruda.gitee.com/images/1757953757049455327/4aae9dd2_1970629.png "点击Github")
+
+在弹出的界面中，点击 **Authorize Netlify** 按钮
+
+![点击Authorize Netlify](https://foruda.gitee.com/images/1757953967784835042/d215d477_1970629.png "点击Authorize Netlify")
+
+等待认证完成后，点击 **Install** 按钮
+
+![点击Install](https://foruda.gitee.com/images/1757954189874419317/d199fcd2_1970629.png "点击Install")
+
+> 这里会默认选择你所有的Github仓库代码，你可以点击**Only select repository**来选择只安装本项目
+
+当你上面步骤都完成后，能看到导入的项目
+
+![点击项目名开始部署](https://foruda.gitee.com/images/1757954792207038025/38ce2fd8_1970629.png "点击项目名开始部署")
+
+现在回到开始页[https://app.netlify.com/start](https://app.netlify.com/start)，点击**GitHub**
+![点击GitHub](https://foruda.gitee.com/images/1757987455727954611/3838b0c1_1970629.png "点击GitHub")
+
+点击导入的项目
+![点击导入的项目](https://foruda.gitee.com/images/1757987849195653381/aaad2c10_1970629.png "点击导入的项目")
+
+### 部署设置
+
+1. 填写好项目名称**Project name**，如果不填写则会随机生成一个
+
+2. 将**Build command**修改为
+    ```bash
+    pnpm run build
+    ```
+
+3. 点击**Add environment variables** - **Add key/value pairs** - **New variable** 添加三个环境变量。如下图
+
+    根据情况填写项目名称和环境变量，*其余项不熟悉的请不要更改*。postgresql数据库配置请看[数据库配置](../usedb/postgresql)，环境变量key必须是以下三个，value 是你对应的值
+
+    ```bash
+    S3_ACCESS_KEY_ID='你的存储桶AccessKeyID'
+    S3_SECRET_ACCESS_KEY='你的存储桶AccessKeySecret'
+    PG_CONNECTION_STRING='你的postgresql连接地址'
+    ```
+
+![添加三个环境变量](https://foruda.gitee.com/images/1757991847062394139/535628ea_1970629.png "添加三个环境变量")
+
+4. 点击Deploy，等待部署
+
+5. 最后点击Production deploys下方Production: main@HEAD可以查看部署日志
+
+    等 *Deploy log* 状态全部是 *Complete* 就算是部署完成了
+
+![部署完成](https://foruda.gitee.com/images/1758073342965752503/206a3f81_1970629.png "部署完成")
+
+6. 部署失败？请看[问题解决](#heading-⁉️问题解决)
+
+## 🌏 域名配置
+
+依次点击项目左侧 **Domain management** - **Add a domain** - **Add a domain you already own**
+
+![域名配置](https://foruda.gitee.com/images/1758010858064174190/44e2892d_1970629.png "域名配置")
+
+1. 输入域名后，点击**Verify**
+2. 前往你的域名提供商，添加一个域名解析
+```yml
+记录类型：CNAME
+主机记录：填写你的域名
+记录值：看上图 Netlify subdomain 上方的域名
+```
+
+## ⁉️问题解决
+
+若你的部署日志中提示，*Worker 启动超时*，并带有 *ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL * 错误提示，类似如下等信息时
+
+```bash
+Error: Worker 57 启动超时
+*
+Error: write EPIPE
+*
+ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @afilmory/ssr@1.0.0 build: `sh scripts/build.sh`
+Exit status 1
+*
+```
+
+找到项目根目录下的 **builder.config.ts** ，大概116行左右
+
+```shell
+# 将
+useClusterMode: true,
+# 修改为
+useClusterMode: false,
+```
+

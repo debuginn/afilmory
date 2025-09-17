@@ -27,9 +27,9 @@ export function DocumentFooter({ createdAt, lastModified }: DocumentMetaProps) {
     }
   }
   const themeOptions = [
-    { value: 'light', icon: Sun, label: 'Light' },
-    { value: 'system', icon: Monitor, label: 'System' },
-    { value: 'dark', icon: Moon, label: 'Dark' },
+    { value: 'light', icon: Sun, label: '亮色' },
+    { value: 'system', icon: Monitor, label: '自动' },
+    { value: 'dark', icon: Moon, label: '暗色' },
   ]
   const activeIndex = themeOptions.findIndex((option) => option.value === theme)
 
@@ -60,7 +60,7 @@ export function DocumentFooter({ createdAt, lastModified }: DocumentMetaProps) {
                     }}
                     className="text-text-secondary pr-4 align-top font-medium whitespace-nowrap"
                   >
-                    Created At
+                    创建时间
                   </td>
                   <td
                     style={{
@@ -88,7 +88,7 @@ export function DocumentFooter({ createdAt, lastModified }: DocumentMetaProps) {
                     }}
                     className="text-text-secondary pr-4 align-top font-medium whitespace-nowrap"
                   >
-                    Last Modified
+                    修改时间
                   </td>
                   <td
                     style={{

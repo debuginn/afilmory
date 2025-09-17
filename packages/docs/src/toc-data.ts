@@ -17,618 +17,665 @@ export interface FileToc {
 
 export const tocData: FileToc[] = [
   {
-    file: 'index.mdx',
-    path: '/',
-    title: 'Overview',
-    toc: [
+    "file": "index.mdx",
+    "path": "/",
+    "title": "概述",
+    "toc": [
       {
-        id: 'heading-overview',
-        level: 1,
-        text: 'Overview',
-        children: [
+        "id": "heading-概述",
+        "level": 1,
+        "text": "概述",
+        "children": [
           {
-            id: 'heading-features',
-            level: 2,
-            text: '🌟 Features',
-            children: [
+            "id": "heading-🌟-特性",
+            "level": 2,
+            "text": "🌟 特性",
+            "children": [
               {
-                id: 'heading-core-functionality',
-                level: 3,
-                text: 'Core Functionality',
-                children: [],
+                "id": "heading-核心功能",
+                "level": 3,
+                "text": "核心功能",
+                "children": []
               },
               {
-                id: 'heading-image-processing',
-                level: 3,
-                text: 'Image Processing',
-                children: [],
+                "id": "heading-图像处理",
+                "level": 3,
+                "text": "图像处理",
+                "children": []
               },
               {
-                id: 'heading-advanced-features',
-                level: 3,
-                text: 'Advanced Features',
-                children: [],
-              },
-            ],
+                "id": "heading-高级特性",
+                "level": 3,
+                "text": "高级特性",
+                "children": []
+              }
+            ]
           },
           {
-            id: 'heading-technical-architecture',
-            level: 2,
-            text: '🏗️ Technical Architecture',
-            children: [
+            "id": "heading-🏗️-技术架构",
+            "level": 2,
+            "text": "🏗️ 技术架构",
+            "children": [
               {
-                id: 'heading-frontend-tech-stack',
-                level: 3,
-                text: 'Frontend Tech Stack',
-                children: [],
+                "id": "heading-前端技术栈",
+                "level": 3,
+                "text": "前端技术栈",
+                "children": []
               },
               {
-                id: 'heading-build-system',
-                level: 3,
-                text: 'Build System',
-                children: [],
+                "id": "heading-构建系统",
+                "level": 3,
+                "text": "构建系统",
+                "children": []
               },
               {
-                id: 'heading-storage-architecture',
-                level: 3,
-                text: 'Storage Architecture',
-                children: [],
-              },
-            ],
+                "id": "heading-存储架构",
+                "level": 3,
+                "text": "存储架构",
+                "children": []
+              }
+            ]
           },
           {
-            id: 'heading-quick-start',
-            level: 2,
-            text: '🚀 Quick Start',
-            children: [
-              {
-                id: 'heading-docker-deployment',
-                level: 3,
-                text: 'Docker Deployment',
-                children: [],
-              },
-            ],
-          },
-          {
-            id: 'heading-configuration-options',
-            level: 2,
-            text: '⚙️ Configuration Options',
-            children: [
-              {
-                id: 'heading-remote-repository-configuration-repo',
-                level: 4,
-                text: 'Remote Repository Configuration (`repo`)',
-                children: [],
-              },
-              {
-                id: 'heading-storage-configuration-storage',
-                level: 4,
-                text: 'Storage Configuration (`storage`)',
-                children: [],
-              },
-              {
-                id: 'heading-build-options-options',
-                level: 4,
-                text: 'Build Options (`options`)',
-                children: [],
-              },
-              {
-                id: 'heading-performance-configuration-performance',
-                level: 4,
-                text: 'Performance Configuration (`performance`)',
-                children: [],
-              },
-              {
-                id: 'heading-logging-configuration-logging',
-                level: 4,
-                text: 'Logging Configuration (`logging`)',
-                children: [],
-              },
-            ],
-          },
-          {
-            id: 'heading-cli-commands',
-            level: 2,
-            text: '📋 CLI Commands',
-            children: [
-              {
-                id: 'heading-build-commands',
-                level: 3,
-                text: 'Build Commands',
-                children: [],
-              },
-              {
-                id: 'heading-development-commands',
-                level: 3,
-                text: 'Development Commands',
-                children: [],
-              },
-              {
-                id: 'heading-notes',
-                level: 3,
-                text: 'Notes',
-                children: [],
-              },
-            ],
-          },
-          {
-            id: 'heading-advanced-usage',
-            level: 2,
-            text: '🔧 Advanced Usage',
-            children: [
-              {
-                id: 'heading-custom-storage-provider',
-                level: 3,
-                text: 'Custom Storage Provider',
-                children: [],
-              },
-              {
-                id: 'heading-custom-image-processing',
-                level: 3,
-                text: 'Custom Image Processing',
-                children: [],
-              },
-            ],
-          },
-          {
-            id: 'heading-license',
-            level: 2,
-            text: '📄 License',
-            children: [],
-          },
-          {
-            id: 'heading-related-links',
-            level: 2,
-            text: '🔗 Related Links',
-            children: [],
-          },
-        ],
-      },
-    ],
+            "id": "heading-📄-许可证",
+            "level": 2,
+            "text": "📄 许可证",
+            "children": []
+          }
+        ]
+      }
+    ]
   },
   {
-    file: 'deployment/index.mdx',
-    path: '/deployment',
-    title: 'Deployment',
-    toc: [
+    "file": "deployment/index.mdx",
+    "path": "/deployment",
+    "title": "部署指南",
+    "toc": [
       {
-        id: 'heading-deployment',
-        level: 1,
-        text: 'Deployment',
-        children: [],
-      },
-    ],
+        "id": "heading-部署指南",
+        "level": 1,
+        "text": "部署指南",
+        "children": []
+      }
+    ]
   },
   {
-    file: 'deployment/cloudflare-pages.mdx',
-    path: '/deployment/cloudflare-pages',
-    title: 'Cloudflare Pages',
-    toc: [
+    "file": "deployment/cloudflare-pages.mdx",
+    "path": "/deployment/cloudflare-pages",
+    "title": "Cloudflare Pages 🚧",
+    "toc": [
       {
-        id: 'heading-cloudflare-pages-deployment',
-        level: 1,
-        text: 'Cloudflare Pages Deployment',
-        children: [],
-      },
-    ],
+        "id": "heading-Cloudflare-Pages-部署",
+        "level": 1,
+        "text": "Cloudflare Pages 部署",
+        "children": []
+      }
+    ]
   },
   {
-    file: 'deployment/docker.mdx',
-    path: '/deployment/docker',
-    title: 'Docker',
-    toc: [
+    "file": "deployment/docker.mdx",
+    "path": "/deployment/docker",
+    "title": "Docker",
+    "toc": [
       {
-        id: 'heading-docker-deployment',
-        level: 1,
-        text: 'Docker Deployment',
-        children: [
+        "id": "heading-Docker-部署",
+        "level": 1,
+        "text": "Docker 部署",
+        "children": [
           {
-            id: 'heading-tldr',
-            level: 2,
-            text: 'TL;DR',
-            children: [],
+            "id": "heading-快速摘要",
+            "level": 2,
+            "text": "快速摘要",
+            "children": [
+              {
+                "id": "heading-说明",
+                "level": 3,
+                "text": "说明",
+                "children": []
+              }
+            ]
           },
           {
-            id: 'heading-quick-start',
-            level: 2,
-            text: '🚀 Quick Start',
-            children: [
+            "id": "heading-🚀-快速开始",
+            "level": 2,
+            "text": "🚀 快速开始",
+            "children": [
               {
-                id: 'heading-prerequisites',
-                level: 3,
-                text: 'Prerequisites',
-                children: [],
+                "id": "heading-前提条件",
+                "level": 3,
+                "text": "前提条件",
+                "children": []
               },
               {
-                id: 'heading-1-configuration-files',
-                level: 3,
-                text: '1. Configuration Files',
-                children: [],
+                "id": "heading-1-配置文件",
+                "level": 3,
+                "text": "1. 配置文件",
+                "children": []
               },
               {
-                id: 'heading-2-dockerfile-setup',
-                level: 3,
-                text: '2. Dockerfile setup',
-                children: [],
+                "id": "heading-2-Dockerfile-设置",
+                "level": 3,
+                "text": "2. Dockerfile 设置",
+                "children": []
               },
               {
-                id: 'heading-3-docker-compose-setup',
-                level: 3,
-                text: '3. Docker Compose Setup',
-                children: [],
+                "id": "heading-3-Docker-Compose-设置",
+                "level": 3,
+                "text": "3. Docker Compose 设置",
+                "children": []
               },
               {
-                id: 'heading-4-building-and-running',
-                level: 3,
-                text: '4. Building and Running',
-                children: [
+                "id": "heading-4-构建和运行",
+                "level": 3,
+                "text": "4. 构建和运行",
+                "children": [
                   {
-                    id: 'heading-option-1-using-docker-compose-recommended',
-                    level: 4,
-                    text: 'Option 1: Using Docker Compose (Recommended)',
-                    children: [],
+                    "id": "heading-选项-1：使用-Docker-Compose（推荐）",
+                    "level": 4,
+                    "text": "选项 1：使用 Docker Compose（推荐）",
+                    "children": []
                   },
                   {
-                    id: 'heading-option-2-manual-docker-build',
-                    level: 4,
-                    text: 'Option 2: Manual Docker Build',
-                    children: [],
-                  },
-                ],
-              },
-            ],
+                    "id": "heading-选项-2：手动-Docker-构建",
+                    "level": 4,
+                    "text": "选项 2：手动 Docker 构建",
+                    "children": []
+                  }
+                ]
+              }
+            ]
           },
           {
-            id: 'heading-configuration-details',
-            level: 2,
-            text: '📋 Configuration Details',
-            children: [
+            "id": "heading-📋-配置详情",
+            "level": 2,
+            "text": "📋 配置详情",
+            "children": [
               {
-                id: 'heading-storage-providers',
-                level: 3,
-                text: 'Storage Providers',
-                children: [],
-              },
-              {
-                id: 'heading-performance-tuning',
-                level: 3,
-                text: 'Performance Tuning',
-                children: [],
-              },
-            ],
-          },
-        ],
-      },
-    ],
+                "id": "heading-存储提供商",
+                "level": 3,
+                "text": "存储提供商",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
-    file: 'deployment/github-action.mdx',
-    path: '/deployment/github-action',
-    title: 'Github Action',
-    toc: [
+    "file": "deployment/github-action.mdx",
+    "path": "/deployment/github-action",
+    "title": "Github Action 🚧",
+    "toc": [
       {
-        id: 'heading-github-action-deployment',
-        level: 1,
-        text: 'Github Action Deployment',
-        children: [],
-      },
-    ],
+        "id": "heading-Github-Action-部署",
+        "level": 1,
+        "text": "Github Action 部署",
+        "children": []
+      }
+    ]
   },
   {
-    file: 'deployment/github-pages.mdx',
-    path: '/deployment/github-pages',
-    title: 'Github Pages',
-    toc: [
+    "file": "deployment/github-pages.mdx",
+    "path": "/deployment/github-pages",
+    "title": "Github Pages 🚧",
+    "toc": [
       {
-        id: 'heading-github-pages-deployment',
-        level: 1,
-        text: 'Github Pages Deployment',
-        children: [],
-      },
-    ],
+        "id": "heading-Github-Pages-部署",
+        "level": 1,
+        "text": "Github Pages 部署",
+        "children": []
+      }
+    ]
   },
   {
-    file: 'deployment/vercel.mdx',
-    path: '/deployment/vercel',
-    title: 'Vercel',
-    toc: [
+    "file": "deployment/Netlify.mdx",
+    "path": "/deployment/Netlify",
+    "title": "Netlify",
+    "toc": [
       {
-        id: 'heading-vercel-deployment',
-        level: 1,
-        text: 'Vercel Deployment',
-        children: [],
-      },
-    ],
+        "id": "heading-Netlify部署指南",
+        "level": 1,
+        "text": "Netlify部署指南",
+        "children": [
+          {
+            "id": "heading-🍕-准备工作",
+            "level": 2,
+            "text": "🍕 准备工作",
+            "children": []
+          },
+          {
+            "id": "heading-🚀-快速开始",
+            "level": 2,
+            "text": "🚀 快速开始",
+            "children": []
+          },
+          {
+            "id": "heading-🎑-注册登录Netlify",
+            "level": 2,
+            "text": "🎑 注册登录Netlify",
+            "children": [
+              {
+                "id": "heading-使用GitHub注册",
+                "level": 3,
+                "text": "使用GitHub注册",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "heading-👏开始部署",
+            "level": 2,
+            "text": "👏开始部署",
+            "children": [
+              {
+                "id": "heading-导入项目",
+                "level": 3,
+                "text": "导入项目",
+                "children": []
+              },
+              {
+                "id": "heading-部署设置",
+                "level": 3,
+                "text": "部署设置",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "heading-🌏-域名配置",
+            "level": 2,
+            "text": "🌏 域名配置",
+            "children": []
+          },
+          {
+            "id": "heading-⁉️问题解决",
+            "level": 2,
+            "text": "⁉️问题解决",
+            "children": []
+          }
+        ]
+      }
+    ]
   },
   {
-    file: 'docs-site.mdx',
-    path: '/docs-site',
-    title: 'Docs site',
-    toc: [
+    "file": "deployment/Vercel.mdx",
+    "path": "/deployment/Vercel",
+    "title": "Vercel",
+    "toc": [
       {
-        id: 'heading-afilmory-docs-site',
-        level: 1,
-        text: 'Afilmory Docs Site',
-        children: [
+        "id": "heading-Vercel-部署指南",
+        "level": 1,
+        "text": "Vercel 部署指南",
+        "children": [
           {
-            id: 'heading-features',
-            level: 2,
-            text: 'Features',
-            children: [],
+            "id": "heading-🍕-准备工作",
+            "level": 2,
+            "text": "🍕 准备工作",
+            "children": []
           },
           {
-            id: 'heading-quick-start',
-            level: 2,
-            text: 'Quick Start',
-            children: [
-              {
-                id: 'heading-development',
-                level: 3,
-                text: 'Development',
-                children: [],
-              },
-              {
-                id: 'heading-building',
-                level: 3,
-                text: 'Building',
-                children: [],
-              },
-              {
-                id: 'heading-preview',
-                level: 3,
-                text: 'Preview',
-                children: [],
-              },
-            ],
+            "id": "heading-🚀-快速开始",
+            "level": 2,
+            "text": "🚀 快速开始",
+            "children": []
           },
           {
-            id: 'heading-project-structure',
-            level: 2,
-            text: 'Project Structure',
-            children: [],
+            "id": "heading-🎑-注册登录Vercel",
+            "level": 2,
+            "text": "🎑 注册登录Vercel",
+            "children": []
           },
           {
-            id: 'heading-writing-documentation',
-            level: 2,
-            text: 'Writing Documentation',
-            children: [
+            "id": "heading-🖊️部署项目",
+            "level": 2,
+            "text": "🖊️部署项目",
+            "children": [
               {
-                id: 'heading-file-based-routing',
-                level: 3,
-                text: 'File-based Routing',
-                children: [],
+                "id": "heading-导入GitHub项目",
+                "level": 3,
+                "text": "导入GitHub项目",
+                "children": []
               },
               {
-                id: 'heading-mdx-format',
-                level: 3,
-                text: 'MDX Format',
-                children: [],
-              },
-              {
-                id: 'heading-frontmatter',
-                level: 3,
-                text: 'Frontmatter',
-                children: [],
-              },
-            ],
+                "id": "heading-环境变量配置",
+                "level": 3,
+                "text": "环境变量配置",
+                "children": []
+              }
+            ]
           },
           {
-            id: 'heading-development-guide',
-            level: 2,
-            text: 'Development Guide',
-            children: [
-              {
-                id: 'heading-adding-new-content',
-                level: 3,
-                text: 'Adding New Content',
-                children: [],
-              },
-              {
-                id: 'heading-custom-components',
-                level: 3,
-                text: 'Custom Components',
-                children: [],
-              },
-              {
-                id: 'heading-styling',
-                level: 3,
-                text: 'Styling',
-                children: [],
-              },
-              {
-                id: 'heading-route-generation-plugin',
-                level: 3,
-                text: 'Route Generation Plugin',
-                children: [],
-              },
-            ],
+            "id": "heading-🌏-域名配置",
+            "level": 2,
+            "text": "🌏 域名配置",
+            "children": []
           },
           {
-            id: 'heading-configuration',
-            level: 2,
-            text: 'Configuration',
-            children: [
-              {
-                id: 'heading-vite-configuration',
-                level: 3,
-                text: 'Vite Configuration',
-                children: [],
-              },
-              {
-                id: 'heading-supported-languages',
-                level: 3,
-                text: 'Supported Languages',
-                children: [],
-              },
-            ],
-          },
-          {
-            id: 'heading-deployment',
-            level: 2,
-            text: 'Deployment',
-            children: [],
-          },
-          {
-            id: 'heading-scripts-reference',
-            level: 2,
-            text: 'Scripts Reference',
-            children: [],
-          },
-          {
-            id: 'heading-contributing',
-            level: 2,
-            text: 'Contributing',
-            children: [],
-          },
-        ],
-      },
-    ],
+            "id": "heading-🔘-快速部署",
+            "level": 2,
+            "text": "🔘 快速部署",
+            "children": []
+          }
+        ]
+      }
+    ]
   },
   {
-    file: 'storage/index.mdx',
-    path: '/storage',
-    title: 'Storage providers',
-    toc: [
+    "file": "development/index.mdx",
+    "path": "/development",
+    "title": "本地开发指南",
+    "toc": [
       {
-        id: 'heading-storage-providers',
-        level: 1,
-        text: 'Storage Providers',
-        children: [
-          {
-            id: 'heading-supported-providers',
-            level: 2,
-            text: 'Supported Providers',
-            children: [
-              {
-                id: 'heading-s3-compatible-storage',
-                level: 3,
-                text: 'S3-Compatible Storage',
-                children: [],
-              },
-              {
-                id: 'heading-github-storage',
-                level: 3,
-                text: 'GitHub Storage',
-                children: [],
-              },
-              {
-                id: 'heading-local-file-system',
-                level: 3,
-                text: 'Local File System',
-                children: [],
-              },
-            ],
-          },
-          {
-            id: 'heading-photo-processing-workflow',
-            level: 2,
-            text: 'Photo Processing Workflow',
-            children: [
-              {
-                id: 'heading-image-processing-pipeline',
-                level: 3,
-                text: 'Image Processing Pipeline',
-                children: [],
-              },
-              {
-                id: 'heading-storage-organization',
-                level: 3,
-                text: 'Storage Organization',
-                children: [],
-              },
-              {
-                id: 'heading-processing-commands',
-                level: 3,
-                text: 'Processing Commands',
-                children: [],
-              },
-            ],
-          },
-          {
-            id: 'heading-environment-specific-configurations',
-            level: 2,
-            text: 'Environment-Specific Configurations',
-            children: [
-              {
-                id: 'heading-development-setup',
-                level: 3,
-                text: 'Development Setup',
-                children: [],
-              },
-              {
-                id: 'heading-production-setup',
-                level: 3,
-                text: 'Production Setup',
-                children: [],
-              },
-            ],
-          },
-          {
-            id: 'heading-api-limitations',
-            level: 2,
-            text: 'API Limitations',
-            children: [
-              {
-                id: 'heading-github-storage-limits',
-                level: 3,
-                text: 'GitHub Storage Limits',
-                children: [],
-              },
-              {
-                id: 'heading-storage-provider-comparison',
-                level: 3,
-                text: 'Storage Provider Comparison',
-                children: [],
-              },
-            ],
-          },
-          {
-            id: 'heading-security-considerations',
-            level: 2,
-            text: 'Security Considerations',
-            children: [
-              {
-                id: 'heading-s3-bucket-policies',
-                level: 3,
-                text: 'S3 Bucket Policies',
-                children: [],
-              },
-              {
-                id: 'heading-github-repository-settings',
-                level: 3,
-                text: 'GitHub Repository Settings',
-                children: [],
-              },
-              {
-                id: 'heading-environment-variables',
-                level: 3,
-                text: 'Environment Variables',
-                children: [],
-              },
-            ],
-          },
-        ],
-      },
-    ],
+        "id": "heading-本地开发指南",
+        "level": 1,
+        "text": "本地开发指南",
+        "children": []
+      }
+    ]
   },
+  {
+    "file": "docs-site.mdx",
+    "path": "/docs-site",
+    "title": "文档站点",
+    "toc": [
+      {
+        "id": "heading-Afilmory-文档站点",
+        "level": 1,
+        "text": "Afilmory 文档站点",
+        "children": [
+          {
+            "id": "heading-功能特性",
+            "level": 2,
+            "text": "功能特性",
+            "children": []
+          },
+          {
+            "id": "heading-快速开始",
+            "level": 2,
+            "text": "快速开始",
+            "children": [
+              {
+                "id": "heading-开发",
+                "level": 3,
+                "text": "开发",
+                "children": []
+              },
+              {
+                "id": "heading-构建",
+                "level": 3,
+                "text": "构建",
+                "children": []
+              },
+              {
+                "id": "heading-预览",
+                "level": 3,
+                "text": "预览",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "heading-项目结构",
+            "level": 2,
+            "text": "项目结构",
+            "children": []
+          },
+          {
+            "id": "heading-编写文档",
+            "level": 2,
+            "text": "编写文档",
+            "children": [
+              {
+                "id": "heading-基于文件的路由",
+                "level": 3,
+                "text": "基于文件的路由",
+                "children": []
+              },
+              {
+                "id": "heading-MDX-格式",
+                "level": 3,
+                "text": "MDX 格式",
+                "children": []
+              },
+              {
+                "id": "heading-前置元数据",
+                "level": 3,
+                "text": "前置元数据",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "heading-开发指南",
+            "level": 2,
+            "text": "开发指南",
+            "children": [
+              {
+                "id": "heading-添加新内容",
+                "level": 3,
+                "text": "添加新内容",
+                "children": []
+              },
+              {
+                "id": "heading-自定义组件",
+                "level": 3,
+                "text": "自定义组件",
+                "children": []
+              },
+              {
+                "id": "heading-样式",
+                "level": 3,
+                "text": "样式",
+                "children": []
+              },
+              {
+                "id": "heading-路由生成插件",
+                "level": 3,
+                "text": "路由生成插件",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "heading-配置",
+            "level": 2,
+            "text": "配置",
+            "children": [
+              {
+                "id": "heading-Vite-配置",
+                "level": 3,
+                "text": "Vite 配置",
+                "children": []
+              },
+              {
+                "id": "heading-支持的语言",
+                "level": 3,
+                "text": "支持的语言",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "heading-部署",
+            "level": 2,
+            "text": "部署",
+            "children": []
+          },
+          {
+            "id": "heading-脚本参考",
+            "level": 2,
+            "text": "脚本参考",
+            "children": []
+          },
+          {
+            "id": "heading-贡献指南",
+            "level": 2,
+            "text": "贡献指南",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "storage/index.mdx",
+    "path": "/storage",
+    "title": "存储提供商",
+    "toc": [
+      {
+        "id": "heading-存储提供商",
+        "level": 1,
+        "text": "存储提供商",
+        "children": [
+          {
+            "id": "heading-支持的提供商",
+            "level": 2,
+            "text": "支持的提供商",
+            "children": [
+              {
+                "id": "heading-S3-兼容存储",
+                "level": 3,
+                "text": "S3 兼容存储",
+                "children": []
+              },
+              {
+                "id": "heading-GitHub-存储",
+                "level": 3,
+                "text": "GitHub 存储",
+                "children": []
+              },
+              {
+                "id": "heading-本地文件系统",
+                "level": 3,
+                "text": "本地文件系统",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "heading-照片处理工作流",
+            "level": 2,
+            "text": "照片处理工作流",
+            "children": [
+              {
+                "id": "heading-图像处理流水线",
+                "level": 3,
+                "text": "图像处理流水线",
+                "children": []
+              },
+              {
+                "id": "heading-存储组织",
+                "level": 3,
+                "text": "存储组织",
+                "children": []
+              },
+              {
+                "id": "heading-处理命令",
+                "level": 3,
+                "text": "处理命令",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "heading-环境特定配置",
+            "level": 2,
+            "text": "环境特定配置",
+            "children": [
+              {
+                "id": "heading-开发设置",
+                "level": 3,
+                "text": "开发设置",
+                "children": []
+              },
+              {
+                "id": "heading-生产设置",
+                "level": 3,
+                "text": "生产设置",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "heading-API-限制",
+            "level": 2,
+            "text": "API 限制",
+            "children": [
+              {
+                "id": "heading-GitHub-存储限制",
+                "level": 3,
+                "text": "GitHub 存储限制",
+                "children": []
+              },
+              {
+                "id": "heading-存储提供商比较",
+                "level": 3,
+                "text": "存储提供商比较",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "heading-安全考虑",
+            "level": 2,
+            "text": "安全考虑",
+            "children": [
+              {
+                "id": "heading-S3-存储桶策略",
+                "level": 3,
+                "text": "S3 存储桶策略",
+                "children": []
+              },
+              {
+                "id": "heading-GitHub-仓库设置",
+                "level": 3,
+                "text": "GitHub 仓库设置",
+                "children": []
+              },
+              {
+                "id": "heading-环境变量",
+                "level": 3,
+                "text": "环境变量",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "usedb/postgresql.mdx",
+    "path": "/usedb/postgresql",
+    "title": "数据库申请",
+    "toc": [
+      {
+        "id": "heading-免费PostgreSQL",
+        "level": 1,
+        "text": "免费PostgreSQL",
+        "children": []
+      }
+    ]
+  }
 ]
 
 // Helper function to find TOC data by file path
 export function getTocByFile(filePath: string): TocItem[] | undefined {
-  const item = tocData.find((item) => item.file === filePath)
+  const item = tocData.find(item => item.file === filePath)
   return item?.toc
 }
 
 // Helper function to find TOC data by route path
 export function getTocByPath(routePath: string): TocItem[] | undefined {
-  const item = tocData.find((item) => item.path === routePath)
+  const item = tocData.find(item => item.path === routePath)
   return item?.toc
 }
 
 // Helper function to flatten TOC tree into a simple array
 export function flattenToc(toc: TocItem[]): TocItem[] {
   const result: TocItem[] = []
-
+  
   function traverse(items: TocItem[]) {
     for (const item of items) {
       result.push({
@@ -641,7 +688,7 @@ export function flattenToc(toc: TocItem[]): TocItem[] {
       }
     }
   }
-
+  
   traverse(toc)
   return result
 }
@@ -649,7 +696,7 @@ export function flattenToc(toc: TocItem[]): TocItem[] {
 // Helper function to get all headings at a specific level
 export function getHeadingsByLevel(toc: TocItem[], level: number): TocItem[] {
   const result: TocItem[] = []
-
+  
   function traverse(items: TocItem[]) {
     for (const item of items) {
       if (item.level === level) {
@@ -660,7 +707,7 @@ export function getHeadingsByLevel(toc: TocItem[], level: number): TocItem[] {
       }
     }
   }
-
+  
   traverse(toc)
   return result
 }

@@ -7,10 +7,13 @@ import Route3 from '../contents/deployment/docker.mdx'
 import Route4 from '../contents/deployment/github-action.mdx'
 import Route5 from '../contents/deployment/github-pages.mdx'
 import Route1 from '../contents/deployment/index.mdx'
-import Route6 from '../contents/deployment/vercel.mdx'
-import Route7 from '../contents/docs-site.mdx'
+import Route6 from '../contents/deployment/Netlify.mdx'
+import Route7 from '../contents/deployment/Vercel.mdx'
+import Route8 from '../contents/development/index.mdx'
+import Route9 from '../contents/docs-site.mdx'
 import Route0 from '../contents/index.mdx'
-import Route8 from '../contents/storage/index.mdx'
+import Route10 from '../contents/storage/index.mdx'
+import Route11 from '../contents/usedb/postgresql.mdx'
 
 export interface RouteConfig {
   path: string
@@ -23,103 +26,134 @@ export const routes: RouteConfig[] = [
   {
     path: '/',
     component: Route0,
-    title: 'Overview',
+    title: '概述',
     meta: {
-      title: 'Overview',
-      createdAt: '2025-07-20T22:35:03+08:00',
-      lastModified: '2025-07-20T22:35:03+08:00',
-    },
+        "title": "概述",
+        "createdAt": "2025-07-20T22:35:03+08:00",
+        "lastModified": "2025-09-14T19:54:27+08:00"
+    }
   },
   {
     path: '/deployment',
     component: Route1,
-    title: 'Deployment',
+    title: '部署指南',
     meta: {
-      title: 'Deployment',
-      description:
-        'Guide to deploying Afilmory in production environments, including Docker and configuration options.',
-      createdAt: '2025-07-20T22:35:03+08:00',
-      lastModified: '2025-08-08T08:28:42.778+08:00',
-    },
+        "title": "部署指南",
+        "description": "关于在生产环境中部署 Afilmory 的指南",
+        "createdAt": "2025-07-20T22:35:03+08:00",
+        "lastModified": "2025-09-17T14:55:42+08:00"
+    }
   },
   {
     path: '/deployment/cloudflare-pages',
     component: Route2,
-    title: 'Cloudflare Pages',
+    title: 'Cloudflare Pages 🚧',
     meta: {
-      title: 'Cloudflare Pages',
-      description: 'Guide to deploying Afilmory via Cloudflare Pages.',
-      createdAt: '2025-07-20T22:35:03+08:00',
-      lastModified: '2025-08-08T17:39:40+08:00',
-    },
+        "title": "Cloudflare Pages 🚧",
+        "description": "通过 Cloudflare Pages 部署 Afilmory 的指南",
+        "createdAt": "2025-07-20T22:35:03+08:00",
+        "lastModified": "2025-09-17T14:55:42+08:00"
+    }
   },
   {
     path: '/deployment/docker',
     component: Route3,
     title: 'Docker',
     meta: {
-      title: 'Docker',
-      description: 'Guide to deploying Afilmory via Docker.',
-      createdAt: '2025-07-20T22:35:03+08:00',
-      lastModified: '2025-08-31T11:08:35+08:00',
-    },
+        "title": "Docker",
+        "description": "通过 Docker 部署 Afilmory 的指南",
+        "createdAt": "2025-07-20T22:35:03+08:00",
+        "lastModified": "2025-09-14T19:54:27+08:00"
+    }
   },
   {
     path: '/deployment/github-action',
     component: Route4,
-    title: 'Github Action',
+    title: 'Github Action 🚧',
     meta: {
-      title: 'Github Action',
-      description: 'Guide to deploying Afilmory via Github Action.',
-      createdAt: '2025-07-20T22:35:03+08:00',
-      lastModified: '2025-08-08T17:39:40+08:00',
-    },
+        "title": "Github Action 🚧",
+        "description": "通过 Github Action 部署 Afilmory 的指南",
+        "createdAt": "2025-07-20T22:35:03+08:00",
+        "lastModified": "2025-09-17T14:55:42+08:00"
+    }
   },
   {
     path: '/deployment/github-pages',
     component: Route5,
-    title: 'Github Pages',
+    title: 'Github Pages 🚧',
     meta: {
-      title: 'Github Pages',
-      description: 'Guide to deploying Afilmory via Github Pages.',
-      createdAt: '2025-07-20T22:35:03+08:00',
-      lastModified: '2025-08-08T17:39:40+08:00',
-    },
+        "title": "Github Pages 🚧",
+        "description": "通过 Github Pages 部署 Afilmory 的指南",
+        "createdAt": "2025-07-20T22:35:03+08:00",
+        "lastModified": "2025-09-17T14:55:42+08:00"
+    }
   },
   {
-    path: '/deployment/vercel',
+    path: '/deployment/Netlify',
     component: Route6,
+    title: 'Netlify',
+    meta: {
+        "title": "Netlify",
+        "description": "在 Netlify.app 上部署 Afilmory 的指南。",
+        "createdAt": "2025-09-16T09:22:17+08:00",
+        "lastModified": "2025-09-17T14:55:42+08:00"
+    }
+  },
+  {
+    path: '/deployment/Vercel',
+    component: Route7,
     title: 'Vercel',
     meta: {
-      title: 'Vercel',
-      description: 'Guide to deploying Afilmory via Vercel.',
-      createdAt: '2025-07-20T22:35:03+08:00',
-      lastModified: '2025-08-08T17:39:40+08:00',
-    },
+        "title": "Vercel",
+        "description": "在 Vercel 上部署 Afilmory 的指南。",
+        "createdAt": "2025-09-15T20:35:03+08:00",
+        "lastModified": "2025-09-17T14:55:42+08:00"
+    }
+  },
+  {
+    path: '/development',
+    component: Route8,
+    title: '本地开发指南',
+    meta: {
+        "title": "本地开发指南",
+        "description": "Afilmory本地开发指南",
+        "createdAt": "2025-08-12T15:09:08+08:00",
+        "lastModified": "2025-09-17T14:55:42+08:00"
+    }
   },
   {
     path: '/docs-site',
-    component: Route7,
-    title: 'Docs site',
+    component: Route9,
+    title: '文档站点',
     meta: {
-      title: 'Docs site',
-      description: 'Docs site introduction and contribution guide',
-      createdAt: '2025-09-11T17:05:55+08:00',
-      lastModified: '2025-09-11T17:05:55+08:00',
-    },
+        "title": "文档站点",
+        "description": "文档站点介绍和贡献指南",
+        "createdAt": "2025-09-11T17:05:55+08:00",
+        "lastModified": "2025-09-14T19:54:27+08:00"
+    }
   },
   {
     path: '/storage',
-    component: Route8,
-    title: 'Storage providers',
+    component: Route10,
+    title: '存储提供商',
     meta: {
-      title: 'Storage providers',
-      description:
-        'Afilmory can work with multiple storage providers, including S3, Git and local file system',
-      createdAt: '2025-08-12T15:09:08+08:00',
-      lastModified: '2025-08-31T11:08:35+08:00',
-    },
+        "title": "存储提供商",
+        "description": "Afilmory 可以与多种存储提供商配合使用，包括 S3、Git 和本地文件系统",
+        "createdAt": "2025-08-12T15:09:08+08:00",
+        "lastModified": "2025-09-14T19:54:27+08:00"
+    }
   },
+  {
+    path: '/usedb/postgresql',
+    component: Route11,
+    title: '数据库申请',
+    meta: {
+        "title": "数据库申请",
+        "description": "supabase 申请 PostgreSQL",
+        "createdAt": "2025-09-17T14:47:44+08:00",
+        "lastModified": "2025-09-17T14:55:42+08:00"
+    }
+  }
 ]
 
 export default routes

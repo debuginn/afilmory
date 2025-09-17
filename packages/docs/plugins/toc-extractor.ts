@@ -281,12 +281,13 @@ function extractHeadings(content: string, maxDepth: number): TocItem[] {
 }
 
 function generateHeadingId(text: string): string {
+  // 保留中文字符，只移除特殊符号
   return text
-    .toLowerCase()
-    .replaceAll(/[^\w\s-]/g, '') // 移除特殊字符
-    .replaceAll(/\s+/g, '-') // 空格替换为连字符
+    .replaceAll(/\s+/g, '-') // 所有空格替换为连字符
+    .replaceAll(/[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~]/g, '-') // 特殊字符替换为连字符
     .replaceAll(/-+/g, '-') // 多个连字符合并为一个
     .replaceAll(/^-|-$/g, '') // 移除开头和结尾的连字符
+    .replaceAll(/\s+/g, '-') // 空格替换为连字符
 }
 
 function buildTocTree(headings: TocItem[]): TocItem[] {

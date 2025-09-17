@@ -1,8 +1,8 @@
 ---
 title: 部署指南
-description: 关于在生产环境中部署 Afilmory 的指南，包括 Docker 和配置选项
+description: 关于在生产环境中部署 Afilmory 的指南
 createdAt: 2025-07-20T22:35:03+08:00
-lastModified: 2025-09-14T19:54:27+08:00
+lastModified: 2025-09-17T14:55:42+08:00
 ---
 
 # 部署指南
@@ -14,3 +14,13 @@ Afilmory 可以通过多种方式进行部署，您可以选择最适合您需�
 - [Github Pages 部署](/deployment/github-pages)
 - [Vercel 部署](/deployment/vercel)
 - [Cloudflare Pages 部署](/deployment/cloudflare-pages)
+- [Netlify 部署](/deployment/netlify)
+
+
+>不管你采用哪种方式部署，都需要准备以下信息
+>
+> ```bash
+> S3_ACCESS_KEY_ID='你的存储桶AccessKeyID'
+> S3_SECRET_ACCESS_KEY='你的存储桶AccessKeySecret'
+> PG_CONNECTION_STRING='你的postgresql连接地址'
+> ```
