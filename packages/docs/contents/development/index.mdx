@@ -1,10 +1,176 @@
 ---
 title: 本地开发指南
 description: Afilmory本地开发指南
-createdAt: 2025-08-12T15:09:08+08:00
-lastModified: 2025-09-17T14:55:42+08:00
+createdAt: 2025-09-17T21:26:08+08:00
+lastModified: 2025-09-18T00:22:55+08:00
 ---
 
 # 本地开发指南
 
-🚧 施工中
+> 本地开发暂不支持Windows系统, 若你使用Windows系统，可参考[如何使用 WSL 在 Windows 上安装 Linux](https://learn.microsoft.com/zh-cn/windows/wsl/install)，并可结合TREA IDE[ 使用 WSL 开发](https://docs.trae.cn/ide/wsl)
+
+## 🌏 获取源码
+
+### 下载源码
+
+```bash
+# GitHub 地址
+git clone https://github.com/tangmantan/afilmory.git
+
+# Gitee 地址
+git clone https://gitee.com/tanmantang/afilmory.git
+```
+
+### 安装依赖
+
+```bash
+cd afilmory
+pnpm install
+```
+
+## 🎄 环境配置
+
+### 配置config.json文件
+
+你需要复制config.example.json模板为config.json，并修改信息
+
+```json
+{
+  "name": "懒洋洋喝咖啡",  //设置网站名称
+  "title": "懒洋洋喝咖啡", //设置网站title
+  "model": "light",  // 设置模式，可选 light | dark
+  "description": "记录生活中的美好瞬间，通过我的镜头记录每日的温暖和情感。",  // 设置描述
+  "url": "https://pix.tanmantang.com",  // 设置网站url，可用于分享等时候的链接地址
+  // 设置作者信息
+  "author": {
+    "name": "谭满堂",
+    "url": "https://tanmantang.com/",
+    "avatar": "https://tanmantang.oss-cn-chengdu.aliyuncs.com/public/logo.png"
+  },
+  // 设置地图
+  "map": [
+    "maplibre"
+  ],
+  // 设置地图样式
+  "mapStyle": "https://tiles.openfreemap.org/styles/liberty",
+  // 设置社交媒体，不设置则不显示，可选 github | gitee | douyin | twitter | rss ,
+  "social": {
+    "github": "tangmantan/afilmory",
+    "gitee": "tanmantang/afilmory",
+    "douyin": "https://www.douyin.com/user/username",
+    "rss": true
+  },
+  // 存储桶设置, 详情请查看存储提供商
+  "storage": {
+    "provider": "s3",
+    "bucket": "tanmantang",
+    "region": "oss-cn-chengdu",
+    "prefix": "afilmory/",
+    "endpoint": "https://oss-cn-chengdu.aliyuncs.com"
+  },
+  // 如果你使用github作为你的图片存储仓库，则需要配置以下信息，并且需要在.env配置文件中添加GIT_TOKEN
+  "repo": {
+    "enable": false, // 修改为 true
+    "url": "https://github.com/username/gallery-assets"  // 你github图片仓库地址
+  }
+}
+```
+
+### 配置.env配置文件
+复制 .env.template 为 .env 文件
+
+```bash
+S3_ACCESS_KEY_ID='填写你的存储桶ID'
+S3_SECRET_ACCESS_KEY='填写你的存储桶SECRET'
+
+PG_CONNECTION_STRING='填写你的数据库连接地址'
+
+GIT_TOKEN='若未启用github图片仓库则无需填写'
+```
+
+## 📋 CLI 命令
+
+### 开发命令
+
+```bash
+# 启动开发服务器（同时运行web和SSR）
+pnpm dev
+
+# 仅启动web开发服务器
+pnpm --filter web dev
+
+# 仅启动SSR开发服务器
+pnpm --filter @afilmory/ssr dev
+
+# 构建生产版本
+pnpm build
+
+# 从存储构建清单（生成照片元数据）
+pnpm run build:manifest
+
+# 强制重新构建所有照片和元数据
+pnpm run build:manifest -- --force
+
+# 仅强制重新生成缩略图
+pnpm run build:manifest -- --force-thumbnails
+
+# 仅强制重新生成清单
+pnpm run build:manifest -- --force-manifest
+```
+
+
+### 数据库命令（SSR应用）
+
+```bash
+# 生成数据库迁移
+pnpm --filter @afilmory/ssr db:generate
+
+# 运行数据库迁移
+pnpm --filter @afilmory/ssr db:migrate
+```
+### 代码质量命令
+
+```bash
+# 检查并修复代码
+pnpm lint
+
+# 格式化代码
+pnpm format
+
+# 类型检查（web应用）
+pnpm --filter web type-check
+```
+
+## 🔧 高级用法
+
+### 自定义存储提供程序
+
+实现接口以支持新的存储后端：`StorageProvider`
+
+```tsx
+import { StorageProvider } from './src/core/storage/interfaces'
+
+class MyStorageProvider implements StorageProvider {
+  async getFile(key: string): Promise<Buffer | null> {
+    // Implement file retrieval logic
+  }
+
+  async listImages(): Promise<StorageObject[]> {
+    // Implement image list retrieval logic
+  }
+
+  // ... other methods
+}
+```
+
+### 自定义图像处理
+
+在目录中添加自定义处理器：`src/core/image/`
+
+```tsx
+export async function customImageProcessor(buffer: Buffer) {
+  // Custom image processing logic
+  return processedBuffer
+}
+```
+

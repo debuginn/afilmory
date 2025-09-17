@@ -1,12 +1,55 @@
 ---
 title: 数据库申请
-description: supabase 申请 PostgreSQL
+description: Afilmory点赞和浏览量需要数据库的支持，此文档将说明如何申请免费的PostgreSQL用于Afilmory
 createdAt: 2025-09-17T14:47:44+08:00
-lastModified: 2025-09-17T14:55:42+08:00
+lastModified: 2025-09-18T00:22:55+08:00
 ---
 
-# 免费PostgreSQL
+# 使用免费的PostgreSQL
 
-supabase 申请免费的 PostgreSQL
 
-🚧 施工中
+Afilmory点赞和浏览量需要数据库的支持，此文档将说明如何申请免费的PostgreSQL用于Afilmory
+
+
+## 使用supabase申请免费的 PostgreSQL
+
+进入 [supabase官网](https://supabase.com/)，使用GitHub或邮箱注册账号，若已经有账号了，直接登录即可
+
+注册登录步骤这里就不在赘述，直接跳过
+
+## 新建项目
+
+![新建项目](https://foruda.gitee.com/images/1758122707902176193/d86be025_1970629.png "新建项目")
+
+输入项目名称(Project name)和数据库密码(Databases Password)和选择地区(Region)后，点击**Create new project**按钮进入下一步
+![输入基本信息](https://foruda.gitee.com/images/1758122939939319379/3ebb1aff_1970629.png "输入基本信息")
+
+## 新建数据库表
+
+点击最左侧的**SQL Editor**，并且注意右侧的 *Tables* 数应当为 0 
+![点击左侧SQL Editor](https://foruda.gitee.com/images/1758123325942742983/8831b291_1970629.png "点击左侧SQL Editor")
+
+找到本项目中的两个sql文件，文件路径为
+```txt
+apps/ssr/drizzle/0000_nostalgic_nekra.sql
+apps/ssr/drizzle/0001_watery_swordsman.sql
+```
+将里面的内容，复制到刚刚打开的SQL Editor中，如下，点击右下角 **Run** 执行SQL，底部将输出 `Success. No rows returned` 并且SQL将创建两张表
+
+![运行sql](https://foruda.gitee.com/images/1758124043054669515/864cd3a2_1970629.png "运行sql")
+
+点击最左侧**Table Editor**按钮，将看到两张表和表里的字段
+
+![查看表信息](https://foruda.gitee.com/images/1758124359992721687/93daf8b9_1970629.png "查看表信息")
+
+## 获取连接地址
+
+点击**Project overview**回到主页，点击 **Connect** 按钮，获取连接地址
+
+![获取连接地址](https://foruda.gitee.com/images/1758124758773014953/56ea8749_1970629.png "获取连接地址")
+
+复制下图所示的连接地址
+
+![获取连接地址](https://foruda.gitee.com/images/1758124932271601350/b2400df5_1970629.png "获取连接地址")
+
+> 你需要将连接地址中的  [YOUR-PASSWORD]  替换为你的密码，密码便是新建项目时输入的Databases Password

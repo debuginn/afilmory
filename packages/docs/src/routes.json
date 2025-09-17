@@ -84,18 +84,8 @@
     "meta": {
       "title": "本地开发指南",
       "description": "Afilmory本地开发指南",
-      "createdAt": "2025-08-12T15:09:08+08:00",
+      "createdAt": "2025-09-17T21:26:08+08:00",
       "lastModified": "2025-09-17T14:55:42+08:00"
-    }
-  },
-  {
-    "path": "/docs-site",
-    "title": "文档站点",
-    "meta": {
-      "title": "文档站点",
-      "description": "文档站点介绍和贡献指南",
-      "createdAt": "2025-09-11T17:05:55+08:00",
-      "lastModified": "2025-09-14T19:54:27+08:00"
     }
   },
   {
@@ -113,7 +103,7 @@
     "title": "数据库申请",
     "meta": {
       "title": "数据库申请",
-      "description": "supabase 申请 PostgreSQL",
+      "description": "Afilmory点赞和浏览量需要数据库的支持，此文档将说明如何申请免费的PostgreSQL用于Afilmory",
       "createdAt": "2025-09-17T14:47:44+08:00",
       "lastModified": "2025-09-17T14:55:42+08:00"
     }

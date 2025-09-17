@@ -20,3 +20,7 @@ photos
 */*/.next
 .claude
 
+# Auto-generated files for docs site
+packages/docs/src/routes.json
+packages/docs/src/routes.ts
+packages/docs/src/toc-data.ts

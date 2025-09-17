@@ -2,7 +2,7 @@
 title: 存储提供商
 description: Afilmory 可以与多种存储提供商配合使用，包括 S3、Git 和本地文件系统
 createdAt: 2025-08-12T15:09:08+08:00
-lastModified: 2025-09-14T19:54:27+08:00
+lastModified: 2025-09-18T00:22:55+08:00
 ---
 
 # 存储提供商
@@ -11,11 +11,11 @@ Afilmory 的灵活存储架构允许您跨不同平台存储照片。照片处�
 
 ## 支持的提供商
 
-### S3 兼容存储
+### S3 / OSS 兼容存储
 
-S3 兼容存储是生产部署的推荐选项，提供可扩展性、CDN 集成和可靠性能。
+S3 / OSS 兼容存储是生产部署的推荐选项，提供可扩展性、CDN 集成和可靠性能。
 
-**在 `builder.config.json` 中的配置：**
+**在 `config.json` 中的配置：**
 
 ```json
 {
@@ -48,7 +48,7 @@ GitHub 存储利用 Git 仓库存储照片，非常适合静态站点、小型�
 - ⚠️ 受 GitHub API 速率限制
 - ⚠️ 不适合大文件或频繁更新
 
-**在 `builder.config.json` 中的配置：**
+**在 `config.json` 中的配置：**
 
 ```json
 {
@@ -102,7 +102,7 @@ GIT_TOKEN=ghp_your_github_personal_access_token
 - ⚠️ 需要适当的文件系统权限
 - ⚠️ 不适合分布式部署
 
-**在 `builder.config.json` 中的配置：**
+**在 `config.json` 中的配置：**
 
 ```json
 {
@@ -131,7 +131,7 @@ GIT_TOKEN=ghp_your_github_personal_access_token
 
 Afilmory 按以下结构在存储中组织文件：
 
-```
+```txt
 photos/
 ├── 2024/
 │   ├── 01-january/
@@ -214,7 +214,7 @@ pnpm run build:manifest -- --path "2024/vacation"
 
 ### 存储提供商比较
 
-| 功能 | S3 | GitHub | 本地 |
+| 功能 | S3/OSS | GitHub | 本地 |
 |------|----|--------|------|
 | 存储空间 | 按需付费 | 免费 1GB | 取决于磁盘 |
 | CDN | 额外费用 | 免费全球 CDN | 手动设置 |

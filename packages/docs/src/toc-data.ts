@@ -95,7 +95,14 @@ export const tocData: FileToc[] = [
         "id": "heading-部署指南",
         "level": 1,
         "text": "部署指南",
-        "children": []
+        "children": [
+          {
+            "id": "heading-注意事项",
+            "level": 2,
+            "text": "注意事项",
+            "children": []
+          }
+        ]
       }
     ]
   },
@@ -234,9 +241,9 @@ export const tocData: FileToc[] = [
     "title": "Netlify",
     "toc": [
       {
-        "id": "heading-Netlify部署指南",
+        "id": "heading-Netlify-部署指南",
         "level": 1,
-        "text": "Netlify部署指南",
+        "text": "Netlify 部署指南",
         "children": [
           {
             "id": "heading-🍕-准备工作",
@@ -370,149 +377,88 @@ export const tocData: FileToc[] = [
         "id": "heading-本地开发指南",
         "level": 1,
         "text": "本地开发指南",
-        "children": []
-      }
-    ]
-  },
-  {
-    "file": "docs-site.mdx",
-    "path": "/docs-site",
-    "title": "文档站点",
-    "toc": [
-      {
-        "id": "heading-Afilmory-文档站点",
-        "level": 1,
-        "text": "Afilmory 文档站点",
         "children": [
           {
-            "id": "heading-功能特性",
+            "id": "heading-🌏-获取源码",
             "level": 2,
-            "text": "功能特性",
-            "children": []
-          },
-          {
-            "id": "heading-快速开始",
-            "level": 2,
-            "text": "快速开始",
+            "text": "🌏 获取源码",
             "children": [
               {
-                "id": "heading-开发",
+                "id": "heading-下载源码",
                 "level": 3,
-                "text": "开发",
+                "text": "下载源码",
                 "children": []
               },
               {
-                "id": "heading-构建",
+                "id": "heading-安装依赖",
                 "level": 3,
-                "text": "构建",
-                "children": []
-              },
-              {
-                "id": "heading-预览",
-                "level": 3,
-                "text": "预览",
+                "text": "安装依赖",
                 "children": []
               }
             ]
           },
           {
-            "id": "heading-项目结构",
+            "id": "heading-🎄-环境配置",
             "level": 2,
-            "text": "项目结构",
-            "children": []
-          },
-          {
-            "id": "heading-编写文档",
-            "level": 2,
-            "text": "编写文档",
+            "text": "🎄 环境配置",
             "children": [
               {
-                "id": "heading-基于文件的路由",
+                "id": "heading-配置config-json文件",
                 "level": 3,
-                "text": "基于文件的路由",
+                "text": "配置config.json文件",
                 "children": []
               },
               {
-                "id": "heading-MDX-格式",
+                "id": "heading-配置-env配置文件",
                 "level": 3,
-                "text": "MDX 格式",
-                "children": []
-              },
-              {
-                "id": "heading-前置元数据",
-                "level": 3,
-                "text": "前置元数据",
+                "text": "配置.env配置文件",
                 "children": []
               }
             ]
           },
           {
-            "id": "heading-开发指南",
+            "id": "heading-📋-CLI-命令",
             "level": 2,
-            "text": "开发指南",
+            "text": "📋 CLI 命令",
             "children": [
               {
-                "id": "heading-添加新内容",
+                "id": "heading-开发命令",
                 "level": 3,
-                "text": "添加新内容",
+                "text": "开发命令",
                 "children": []
               },
               {
-                "id": "heading-自定义组件",
+                "id": "heading-数据库命令（SSR应用）",
                 "level": 3,
-                "text": "自定义组件",
+                "text": "数据库命令（SSR应用）",
                 "children": []
               },
               {
-                "id": "heading-样式",
+                "id": "heading-代码质量命令",
                 "level": 3,
-                "text": "样式",
-                "children": []
-              },
-              {
-                "id": "heading-路由生成插件",
-                "level": 3,
-                "text": "路由生成插件",
+                "text": "代码质量命令",
                 "children": []
               }
             ]
           },
           {
-            "id": "heading-配置",
+            "id": "heading-🔧-高级用法",
             "level": 2,
-            "text": "配置",
+            "text": "🔧 高级用法",
             "children": [
               {
-                "id": "heading-Vite-配置",
+                "id": "heading-自定义存储提供程序",
                 "level": 3,
-                "text": "Vite 配置",
+                "text": "自定义存储提供程序",
                 "children": []
               },
               {
-                "id": "heading-支持的语言",
+                "id": "heading-自定义图像处理",
                 "level": 3,
-                "text": "支持的语言",
+                "text": "自定义图像处理",
                 "children": []
               }
             ]
-          },
-          {
-            "id": "heading-部署",
-            "level": 2,
-            "text": "部署",
-            "children": []
-          },
-          {
-            "id": "heading-脚本参考",
-            "level": 2,
-            "text": "脚本参考",
-            "children": []
-          },
-          {
-            "id": "heading-贡献指南",
-            "level": 2,
-            "text": "贡献指南",
-            "children": []
           }
         ]
       }
@@ -534,9 +480,9 @@ export const tocData: FileToc[] = [
             "text": "支持的提供商",
             "children": [
               {
-                "id": "heading-S3-兼容存储",
+                "id": "heading-S3-OSS-兼容存储",
                 "level": 3,
-                "text": "S3 兼容存储",
+                "text": "S3 / OSS 兼容存储",
                 "children": []
               },
               {
@@ -651,10 +597,35 @@ export const tocData: FileToc[] = [
     "title": "数据库申请",
     "toc": [
       {
-        "id": "heading-免费PostgreSQL",
+        "id": "heading-使用免费的PostgreSQL",
         "level": 1,
-        "text": "免费PostgreSQL",
-        "children": []
+        "text": "使用免费的PostgreSQL",
+        "children": [
+          {
+            "id": "heading-使用supabase申请免费的-PostgreSQL",
+            "level": 2,
+            "text": "使用supabase申请免费的 PostgreSQL",
+            "children": []
+          },
+          {
+            "id": "heading-新建项目",
+            "level": 2,
+            "text": "新建项目",
+            "children": []
+          },
+          {
+            "id": "heading-新建数据库表",
+            "level": 2,
+            "text": "新建数据库表",
+            "children": []
+          },
+          {
+            "id": "heading-获取连接地址",
+            "level": 2,
+            "text": "获取连接地址",
+            "children": []
+          }
+        ]
       }
     ]
   }
