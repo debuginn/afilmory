@@ -175,7 +175,7 @@ export function Sidebar({ currentPath, onNavigate }: SidebarProps) {
       <div className="bg-material-thick border-border h-full w-full border-[1px] border-solid backdrop-blur-2xl md:border-none md:bg-transparent">
         <div className=" flex items-center px-4 py-6">
           <img
-            src="../../public/tanmantang.svg"
+            src="/tanmantang.svg"
             alt="tanmantang"
             className="h-14 w-14 rounded-t-lg"
           />
