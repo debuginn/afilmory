@@ -192,7 +192,7 @@ export const MasonryHeaderMasonryItem = ({
                   href={`https://github.com/${siteConfig.social?.github}/commit/${GIT_COMMIT_HASH}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="light:text-black/70 light:hover:text-black/90 underline hover:text-[#E7E8E8] dark:text-gray-500"
+                  className="light:text-black/70 light:hover:text-black/90 underline dark:hover:text-white/90"
                 >
                   {new Date(BUILT_DATE).toLocaleDateString(i18n.language, {
                     year: 'numeric',

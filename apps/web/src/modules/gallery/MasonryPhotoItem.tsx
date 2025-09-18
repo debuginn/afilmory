@@ -357,7 +357,7 @@ export const MasonryPhotoItem = ({
 
                 return (
                   differentValue && (
-                    <p className="light:text-black mb-2 line-clamp-2 text-sm opacity-0 group-hover:opacity-100 dark:text-white">
+                    <p className="mb-2 line-clamp-2 text-sm text-white opacity-0 group-hover:opacity-100">
                       {differentValue}
                     </p>
                   )

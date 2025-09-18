@@ -10,18 +10,13 @@ import {
 import { useTranslation } from 'react-i18next'
 import { toast } from 'sonner'
 
-import {
-  MenuItemSeparator,
-  MenuItemText,
-} from '~/atoms/context-menu'
+import { MenuItemSeparator, MenuItemText } from '~/atoms/context-menu'
 import { isMobileDevice } from '~/lib/device-viewport'
 import { ImageLoaderManager } from '~/lib/image-loader-manager'
 
 import type { LivePhotoVideoHandle } from './LivePhotoVideo'
 import type { LoadingIndicatorRef } from './LoadingIndicator'
-import type {
-  ProgressiveImageState,
-} from './types'
+import type { ProgressiveImageState } from './types'
 import { SHOW_SCALE_INDICATOR_DURATION } from './types'
 
 export const useProgressiveImageState = (): [
@@ -347,11 +342,75 @@ export const createContextMenuItems = (
   MenuItemSeparator.default,
   new MenuItemText({
     label: t('photo.download'),
-    click: () => {
-      const a = document.createElement('a')
-      a.href = blobSrc
-      a.download = alt
-      a.click()
+    click: async () => {
+      const loadingToast = toast.loading(t('tmt.downloading'))
+
+      try {
+        // Create a canvas to remove metadata
+        const img = new Image()
+        img.crossOrigin = 'anonymous'
+
+        await new Promise((resolve, reject) => {
+          img.onload = resolve
+          img.onerror = reject
+          img.src = blobSrc
+        })
+
+        const canvas = document.createElement('canvas')
+        const ctx = canvas.getContext('2d')
+        canvas.width = img.naturalWidth
+        canvas.height = img.naturalHeight
+
+        ctx?.drawImage(img, 0, 0)
+
+        // Convert to PNG blob without metadata
+        await new Promise<void>((resolve, reject) => {
+          canvas.toBlob((pngBlob) => {
+            try {
+              if (pngBlob) {
+                const url = URL.createObjectURL(pngBlob)
+                const a = document.createElement('a')
+                a.href = url
+                // Ensure filename ends with .png
+                const filename = alt.endsWith('.png') ? alt : `${alt}.png`
+                a.download = filename
+                a.click()
+
+                // Clean up URL object after download
+                setTimeout(() => {
+                  URL.revokeObjectURL(url)
+                }, 100)
+
+                resolve()
+              } else {
+                reject(new Error('Failed to convert image to PNG'))
+              }
+            } catch (error) {
+              reject(error)
+            }
+          }, 'image/png')
+        })
+
+        toast.dismiss(loadingToast)
+        toast.success(t('tmt.download.success'))
+      } catch (error) {
+        console.error('Failed to download image without metadata:', error)
+
+        // Fallback: try to download the original blob
+        try {
+          const a = document.createElement('a')
+          a.href = blobSrc
+          a.download = alt
+          a.click()
+
+          toast.dismiss(loadingToast)
+          toast.success(t('tmt.download.success'))
+        } catch (fallbackError) {
+          console.error('Fallback download also failed:', fallbackError)
+          toast.dismiss(loadingToast)
+          toast.error(t('tmt.download.error'))
+        }
+      }
     },
   }),
 ]
