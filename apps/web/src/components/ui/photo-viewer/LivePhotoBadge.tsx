@@ -39,9 +39,9 @@ export const LivePhotoBadge: FC<LivePhotoBadgeProps> = ({
       {/* Live Photo 标识 */}
       <div
         className={clsxm(
-          'absolute z-20 flex items-center space-x-1 rounded-xl dark:bg-black/50 light:bg-white/50 px-1 py-1 text-xs dark:text-white light:text-black transition-all duration-200',
-          'cursor-pointer dark:hover:bg-black/70 light:hover:bg-white/70',
-          isLivePhotoPlaying && 'bg-accent/70 hover:bg-accent/80',
+          'absolute z-20 flex items-center space-x-1 rounded-xl bg-black/50 px-1 py-1 text-xs text-white transition-all duration-200',
+          'cursor-pointer hover:bg-black/70',
+          isLivePhotoPlaying && 'bg-accent/90',
           import.meta.env.DEV ? 'top-16 right-4' : 'top-12 lg:top-4 left-4',
         )}
         onClick={handleClick}
@@ -66,8 +66,8 @@ export const LivePhotoBadge: FC<LivePhotoBadgeProps> = ({
             exit={{ opacity: 0 }}
             className="pointer-events-none absolute bottom-4 left-1/2 z-20 -translate-x-1/2"
           >
-            <div className="light:bg-white/50 light:text-black flex items-center gap-2 rounded px-2 py-1 text-xs dark:bg-black/50 dark:text-white">
-              <i className="i-mingcute-live-photo-line light:text-black dark:text-white" />
+            <div className="flex items-center gap-2 rounded bg-black/50 px-2 py-1 text-xs text-white">
+              <i className="i-mingcute-live-photo-fill" />
               <span>{t('photo.live.playing')}</span>
             </div>
           </m.div>

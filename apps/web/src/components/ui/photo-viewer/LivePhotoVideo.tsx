@@ -118,6 +118,7 @@ export const LivePhotoVideo = ({
       })
       const video = videoRef.current
       if (video) {
+        video.muted = false // 确保视频播放时有声音
         video.currentTime = 0
         video.play()
       }
@@ -186,7 +187,6 @@ export const LivePhotoVideo = ({
         opacity: isPlayingLivePhoto ? 1 : 0,
         transition: 'opacity 0.2s ease-in-out',
       }}
-      muted
       playsInline
       onEnded={handleVideoEnded}
       initial={{ opacity: 0 }}

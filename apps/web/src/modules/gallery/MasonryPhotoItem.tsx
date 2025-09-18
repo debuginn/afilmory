@@ -275,7 +275,7 @@ export const MasonryPhotoItem = ({
       {data.isLivePhoto && (
         <div
           className={clsx(
-            'light:text-black light:hover:bg-white/70 absolute z-20 flex items-center space-x-1 rounded-xl bg-black/50 px-1 py-1 text-xs transition-all duration-200 dark:text-white dark:hover:bg-black/70',
+            'absolute z-20 flex items-center space-x-1 rounded-xl bg-black/50 px-1 py-1 text-xs text-white transition-all duration-200 hover:bg-black/70',
             'top-2 left-2',
             'flex-wrap gap-y-1',
           )}
@@ -293,7 +293,14 @@ export const MasonryPhotoItem = ({
           ) : (
             <Fragment>
               <i className="i-mingcute-live-photo-line size-4 shrink-0" />
-              <span className="mr-1 shrink-0">{t('photo.live.badge')}</span>
+              {/* 根据视频URL判断格式并显示标签 */}
+              {data.livePhotoVideoUrl && (
+                <span className="mr-1 shrink-0">
+                  {data.livePhotoVideoUrl.toLowerCase().endsWith('mp4')
+                    ? t('tmt.video.badge')
+                    : t('photo.live.badge')}
+                </span>
+              )}
               {videoConvertionError ? (
                 <span className={'bg-warning/20 ml-0.5 rounded px-1 text-xs'}>
                   <div
