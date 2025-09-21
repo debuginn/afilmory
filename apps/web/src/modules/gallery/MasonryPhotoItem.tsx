@@ -390,16 +390,22 @@ export const MasonryPhotoItem = ({
               </div>
 
               {/* Tags */}
-              {data.tags && data.tags.length > 0 && (
+              {data.tags && (
                 <div className="flex flex-wrap gap-1.5">
-                  {data.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-white/20 px-2 py-0.5 text-xs text-white/90 opacity-0 backdrop-blur-sm group-hover:opacity-100"
-                    >
-                      {tag}
+                  {data.tags.length > 0 ? (
+                    data.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-white/20 px-2 py-0.5 text-xs text-white/90 opacity-0 backdrop-blur-sm group-hover:opacity-100"
+                      >
+                        {tag}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="rounded-full bg-white/20 px-2 py-0.5 text-xs text-white/90 opacity-0 backdrop-blur-sm group-hover:opacity-100">
+                      {t('action.tag.empty')}
                     </span>
-                  ))}
+                  )}
                 </div>
               )}
             </div>
