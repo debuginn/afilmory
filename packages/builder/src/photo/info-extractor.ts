@@ -1,7 +1,6 @@
 import path from 'node:path'
 
-import { env } from '@env'
-
+import userConfig from '../../../../config.json'
 import type { PhotoInfo, PickedExif } from '../types/photo.js'
 import { getGlobalLoggers } from './logger-adapter.js'
 
@@ -27,25 +26,26 @@ export function extractPhotoInfo(
       .filter((tag) => tag !== '')
     log.info(`从 EXIF XPKeywords 提取标签：[${tags.join(', ')}]`)
   } else {
-    // 如果没有 XPKeywords，则从目录路径中提取 tags
+    // 从目录路径中提取 tags
     const dirPath = path.dirname(key)
     if (dirPath && dirPath !== '.' && dirPath !== '/') {
-      // 移除前缀（如果有的话）
       let relativePath = dirPath
-      if (env.S3_PREFIX && dirPath.startsWith(env.S3_PREFIX)) {
-        relativePath = dirPath.slice(env.S3_PREFIX.length)
+      let {prefix} = userConfig.storage
+      // 移除prefix最后的斜杠
+      if (prefix.endsWith('/')) {
+        prefix = prefix.slice(0, -1)
       }
-
+      // 移除前缀（如果有的话）
+      if (prefix && dirPath.startsWith(prefix)) {
+        relativePath = dirPath.slice(userConfig.storage.prefix.length)
+      }
       // 清理路径分隔符
-      relativePath = relativePath.replaceAll(/^\/+|\/+$/g, '')
-
       if (relativePath) {
         // 分割路径并过滤空字符串
         const pathParts = relativePath
           .split('/')
           .filter((part) => part.trim() !== '')
         tags = pathParts.map((part) => part.trim())
-
         log.info(`从路径提取标签：[${tags.join(', ')}]`)
       }
     }
