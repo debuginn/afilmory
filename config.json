@@ -16,13 +16,14 @@
   "social": {
     "github": "tangmantan/afilmory",
     "gitee": "tanmantang/afilmory",
-    "douyin": "https://douyin.com"
+    "douyin": "https://douyin.com",
+    "rss": false
   },
   "storage": {
     "provider": "s3",
     "bucket": "tanmantang",
     "region": "oss-cn-chengdu",
-    "prefix": "afilmory/",
+    "prefix": "test/",
     "endpoint": "https://oss-cn-chengdu.aliyuncs.com"
   }
 }

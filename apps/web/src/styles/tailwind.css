@@ -4,7 +4,7 @@
 @plugin 'daisyui';
 @plugin 'tailwind-scrollbar';
 @plugin 'tailwindcss-animate';
-@plugin 'tailwindcss-safe-area';
+@import 'tailwindcss-safe-area';
 @import 'tailwindcss-uikit-colors/v4/macos.css';
 
 @plugin "daisyui/theme" {
@@ -32,6 +32,7 @@
   --radius: 0.5rem;
   --border: 0 0% 22.1%;
 }
+
 [data-theme='light'] {
   --radius: 0.5rem;
   --border: 0 0% 22.1%;
@@ -95,6 +96,7 @@
     margin-right: auto;
     padding: var(--container-padding);
   }
+
   @media (min-width: 1536px) {
     .container {
       max-width: var(--container-max-width-2xl);
