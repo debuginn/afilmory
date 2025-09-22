@@ -23,7 +23,7 @@
     "provider": "s3",
     "bucket": "tanmantang",
     "region": "oss-cn-chengdu",
-    "prefix": "test/",
+    "prefix": "afilmory/",
     "endpoint": "https://oss-cn-chengdu.aliyuncs.com"
   }
 }
