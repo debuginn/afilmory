@@ -10,12 +10,8 @@ Afilmory (/əˈfɪlməri/, 读音 "uh-FIL-muh-ree，艾-菲-莫-瑞") 是一个�
 
 在线照片画廊示例：
 
-- 本站：[https://oreo.tanmantang.com](https://oreo.tanmantang.com)
-- 本站备用网址：[https://afilmory-one.vercel.app](https://afilmory-one.vercel.app)
-- [afilmory.innei.in](https://afilmory.innei.in)
-- [gallery.mxte.cc](https://gallery.mxte.cc)
-- [photography.pseudoyu.com](https://photography.pseudoyu.com)
-- [afilmory.magren.cc](https://afilmory.magren.cc)
+- [prep.tanmantang.com](https://prep.tanmantang.com) 和 [oreo.tanmantang.com](https://oreo.tanmantang.com)
+- 备用网址：[afilmory-one.vercel.app](https://afilmory-one.vercel.app)
 
 ## 🌟 特性
 
@@ -79,8 +75,10 @@ Afilmory (/əˈfɪlməri/, 读音 "uh-FIL-muh-ree，艾-菲-莫-瑞") 是一个�
 
 ## 📖 开发与部署文档
 
-[https://oreo.docs.tanmantang.com](https://oreo.docs.tanmantang.com)
-或者
+[https://prep.docs.tanmantang.com](https://prep.docs.tanmantang.com)
+
+备用网址
+
 [https://afilmory-docs.vercel.app](https://afilmory-docs.vercel.app)
 
 
