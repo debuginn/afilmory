@@ -22,6 +22,6 @@
     "bucket": "photo",
     "region": "auto",
     "prefix": "/",
-    "endpoint": "https://be7657880f250094d3afe63bfd5ada19.r2.cloudflarestorage.com/photo"
+    "endpoint": "https://be7657880f250094d3afe63bfd5ada19.r2.cloudflarestorage.com"
   }
 }
