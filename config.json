@@ -1,29 +1,27 @@
 {
-  "name": "懒洋洋喝咖啡",
-  "title": "懒洋洋喝咖啡",
+  "name": "Meng小羽",
+  "title": "Debug客栈",
   "model": "light",
   "description": "记录生活中的美好瞬间，通过我的镜头记录的温暖和情感。",
-  "url": "https://prep.tanmantang.com",
+  "url": "https://photo.debuginn.com",
   "author": {
-    "name": "谭满堂",
-    "url": "https://tanmantang.com/",
-    "avatar": "https://tanmantang.oss-cn-chengdu.aliyuncs.com/public/logo.png"
+    "name": "Meng小羽",
+    "url": "https://debuginn.com/",
+    "avatar": "https://webp.debuginn.com/20250929bC0ReU.jpg"
   },
   "map": [
     "maplibre"
   ],
   "mapStyle": "https://tiles.openfreemap.org/styles/liberty",
   "social": {
-    "github": "tangmantan/afilmory",
-    "gitee": "tanmantang/afilmory",
-    "douyin": "https://douyin.com",
+    "github": "debuginn",
     "rss": false
   },
   "storage": {
     "provider": "s3",
-    "bucket": "tanmantang",
-    "region": "oss-cn-chengdu",
-    "prefix": "afilmory/",
-    "endpoint": "https://oss-cn-chengdu.aliyuncs.com"
+    "bucket": "photo",
+    "region": "auto",
+    "prefix": "/",
+    "endpoint": "https://be7657880f250094d3afe63bfd5ada19.r2.cloudflarestorage.com/photo"
   }
 }
