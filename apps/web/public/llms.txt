@@ -1,9 +1,4 @@
-import { NextResponse } from 'next/server'
-
-export const dynamic = 'force-static'
-
-export async function GET() {
-  const content = `# Afilmory - Meng小羽 的摄影画廊
+# Afilmory - Meng小羽 的摄影画廊
 
 > 记录生活中的美好瞬间，通过我的镜头记录的温暖和情感。
 
@@ -42,11 +37,3 @@ Afilmory 是一个现代化的摄影画廊 Web 应用，由 Meng小羽 (@idebugi
 - 地图: MapLibre + OpenFreeMap
 - 存储: Cloudflare R2
 - RSS: 未启用
-`
-
-  return new NextResponse(content, {
-    headers: {
-      'Content-Type': 'text/plain; charset=utf-8',
-    },
-  })
-}
